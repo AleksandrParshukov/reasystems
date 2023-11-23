@@ -1,0 +1,250 @@
+.modal {
+  overflow: hidden;
+  display: block;
+  transform: translateX(100%);
+  transition-delay: 0.3s;
+
+  &.open {
+    transform: translateX(0);
+    transition: transform 0s;
+
+    .modal {
+      &__overlay {
+        opacity: 1;
+      }
+
+      &__body {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(18, 18, 36, 0.40);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &__body {
+    width: 607px;
+    padding: 260px 98px 32px 98px;
+    background-color: $white;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  &__caption {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 110%;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  &__form {
+    width: 100%;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-group {
+    width: 100%;
+    height: 51px;
+    padding: 7px 16px;
+    margin-top: 12px;
+    border-radius: 10px;
+    border: 1px solid $gray-light;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &.focus {
+      border-color: $primary;
+    }
+
+    &--textarea {
+      height: auto;
+      min-height: 51px;
+    }
+
+    &.error {
+      border-color: $assets-4;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    color: $teruary-light;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    > span {
+      color: $assets-4;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    font-size: 16px;
+    color: $black;
+    width: 100%;
+    border: none;
+    padding: 0;
+    height: 0;
+    min-height: 0;
+  }
+
+  &__input {
+    transition: all 0.3s ease;
+  }
+
+  &__textarea {
+    transition: min-height 0.3s ease;
+  }
+
+  &__form-group.open {
+    .modal {
+      &__label {
+        font-size: 12px;
+
+        > svg {
+          display: none;
+        }
+      }
+
+      &__input {
+        height: 19px;
+        margin-top: 4px;
+      }
+
+      &__textarea {
+        min-height: 19px;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  label.error {
+    font-size: 14px;
+    color: $assets-4;
+    margin-top: 8px;
+    margin-left: 16px;
+  }
+  
+
+  &__submit {
+    margin-top: 16px;
+  }
+
+  &__note {
+    font-size: 14px;
+    margin-top: 12px;
+
+    > a {
+      font-size: inherit;
+      color: $primary;
+
+      &:hover {
+        color: $primary-hover;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 32px;
+  }
+
+  
+
+  &__link {
+    font-size: 14px;
+    color: $primary;
+    text-align: center;
+    margin-top: 12px;
+
+    &:hover {
+      color: $primary-hover;
+    }
+
+    &:disabled {
+      color: $primary-disabled;
+    }
+  }
+
+  &__time {
+    font-size: 12px;
+    text-align: center;
+    color: $teruary-light;
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: $lg) {
+  .modal {
+    &__body {
+      width: 100%;
+      padding-inline: 0;
+      border-radius: 0;
+      display: grid;
+      grid-template-columns: 1fr [content-start] 504px [content-end] 1fr;
+      grid-auto-rows: min-content;
+      left: 0;
+
+      > *:not(.modal__close) {
+        grid-column: content;
+      }
+    }
+
+    &__caption {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .modal {
+    &__body {
+      grid-template-columns: 1fr [content-start] 404px [content-end] 1fr;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .modal {
+    &__body {
+      grid-template-columns: 1fr [content-start] 336px [content-end] 1fr;
+    }
+  }
+}

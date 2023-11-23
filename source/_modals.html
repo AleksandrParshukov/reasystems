@@ -1,0 +1,155 @@
+<div class="modal" id="callback-modal">
+  <div class="modal__overlay js_modal_close"></div>
+  <div class="modal__body">
+    <button type="button" class="modal__close js_modal_close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6.13499 18.3625C6.1781 18.4057 6.2293 18.4399 6.28566 18.4633C6.34201 18.4867 6.40242 18.4987 6.46342 18.4987C6.52443 18.4987 6.58484 18.4867 6.64119 18.4633C6.69755 18.4399 6.74874 18.4057 6.79186 18.3625L12.4971 12.6573L18.2046 18.3625C18.2917 18.4496 18.4099 18.4986 18.5331 18.4986C18.6562 18.4986 18.7744 18.4496 18.8615 18.3625C18.9486 18.2754 18.9975 18.1573 18.9975 18.0341C18.9975 17.9109 18.9486 17.7928 18.8615 17.7057L13.1539 12.0005L18.8592 6.29291C18.9463 6.2058 18.9952 6.08766 18.9952 5.96447C18.9952 5.84129 18.9463 5.72315 18.8592 5.63604C18.7721 5.54894 18.6539 5.5 18.5307 5.5C18.4075 5.5 18.2894 5.54894 18.2023 5.63604L12.4971 11.3436L6.78954 5.63836C6.70073 5.56231 6.5865 5.52257 6.46967 5.52708C6.35283 5.5316 6.24201 5.58003 6.15933 5.6627C6.07666 5.74538 6.02823 5.85621 6.02371 5.97304C6.0192 6.08987 6.05894 6.2041 6.13499 6.29291L11.8402 12.0005L6.13499 17.708C6.04853 17.795 6 17.9126 6 18.0353C6 18.1579 6.04853 18.2756 6.13499 18.3625Z"
+          fill="#6C6C6C" />
+      </svg>
+    </button>
+    <p class="modal__caption">Заказать звонок</p>
+    <form id="callback-modal-form" class="modal__form contact_form" action="">
+      <div class="modal__form-group form-group">
+        <label class="modal__label" for="callback-modal-name">ФИО</label>
+        <input class="modal__input" id="callback-modal-name" name="name" type="text">
+      </div>
+      <div class="modal__form-group form-group">
+        <label class="modal__label" for="callback-modal-phone">Номер телефона</label>
+        <input class="modal__input" id="callback-modal-phone" name="phone" type="text">
+      </div>
+
+      <button type="submit" class="modal__submit btn">Отправить заявку</button>
+    </form>
+    <p class="modal__note">
+      Нажимая на кнопку «Отправить заявку» я даю своё согласие
+      <a href="">на обработку персональных данных</a>
+    </p>
+  </div>
+</div>
+
+<div class="modal" id="callback-success-modal">
+  <div class="modal__overlay js_modal_close"></div>
+  <div class="modal__body">
+    <button type="button" class="modal__close js_modal_close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6.13499 18.3625C6.1781 18.4057 6.2293 18.4399 6.28566 18.4633C6.34201 18.4867 6.40242 18.4987 6.46342 18.4987C6.52443 18.4987 6.58484 18.4867 6.64119 18.4633C6.69755 18.4399 6.74874 18.4057 6.79186 18.3625L12.4971 12.6573L18.2046 18.3625C18.2917 18.4496 18.4099 18.4986 18.5331 18.4986C18.6562 18.4986 18.7744 18.4496 18.8615 18.3625C18.9486 18.2754 18.9975 18.1573 18.9975 18.0341C18.9975 17.9109 18.9486 17.7928 18.8615 17.7057L13.1539 12.0005L18.8592 6.29291C18.9463 6.2058 18.9952 6.08766 18.9952 5.96447C18.9952 5.84129 18.9463 5.72315 18.8592 5.63604C18.7721 5.54894 18.6539 5.5 18.5307 5.5C18.4075 5.5 18.2894 5.54894 18.2023 5.63604L12.4971 11.3436L6.78954 5.63836C6.70073 5.56231 6.5865 5.52257 6.46967 5.52708C6.35283 5.5316 6.24201 5.58003 6.15933 5.6627C6.07666 5.74538 6.02823 5.85621 6.02371 5.97304C6.0192 6.08987 6.05894 6.2041 6.13499 6.29291L11.8402 12.0005L6.13499 17.708C6.04853 17.795 6 17.9126 6 18.0353C6 18.1579 6.04853 18.2756 6.13499 18.3625Z"
+          fill="#6C6C6C" />
+      </svg>
+    </button>
+    <p class="modal__caption">Ваша заявка отправлена</p>
+    <p class="modal__text">Менеджер перезвонит вам в рабочее время — c понедельника по пятницу, с 10:00 до 19:00 мск</p>
+    <button class="modal__btn btn js_modal_close">Хорошо</button>
+  </div>
+</div>
+
+<div class="modal" id="auth-modal">
+  <div class="modal__overlay js_modal_close"></div>
+  <div class="modal__body">
+    <button type="button" class="modal__close js_modal_close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6.13499 18.3625C6.1781 18.4057 6.2293 18.4399 6.28566 18.4633C6.34201 18.4867 6.40242 18.4987 6.46342 18.4987C6.52443 18.4987 6.58484 18.4867 6.64119 18.4633C6.69755 18.4399 6.74874 18.4057 6.79186 18.3625L12.4971 12.6573L18.2046 18.3625C18.2917 18.4496 18.4099 18.4986 18.5331 18.4986C18.6562 18.4986 18.7744 18.4496 18.8615 18.3625C18.9486 18.2754 18.9975 18.1573 18.9975 18.0341C18.9975 17.9109 18.9486 17.7928 18.8615 17.7057L13.1539 12.0005L18.8592 6.29291C18.9463 6.2058 18.9952 6.08766 18.9952 5.96447C18.9952 5.84129 18.9463 5.72315 18.8592 5.63604C18.7721 5.54894 18.6539 5.5 18.5307 5.5C18.4075 5.5 18.2894 5.54894 18.2023 5.63604L12.4971 11.3436L6.78954 5.63836C6.70073 5.56231 6.5865 5.52257 6.46967 5.52708C6.35283 5.5316 6.24201 5.58003 6.15933 5.6627C6.07666 5.74538 6.02823 5.85621 6.02371 5.97304C6.0192 6.08987 6.05894 6.2041 6.13499 6.29291L11.8402 12.0005L6.13499 17.708C6.04853 17.795 6 17.9126 6 18.0353C6 18.1579 6.04853 18.2756 6.13499 18.3625Z"
+          fill="#6C6C6C" />
+      </svg>
+    </button>
+    <p class="modal__caption">Авторизация</p>
+    <form id="auth-form" class="modal__form contact_form" action="">
+      <div class="modal__form-group form-group">
+        <label class="modal__label" for="auth-phone">Номер телефона</label>
+        <input class="modal__input" id="auth-phone" name="phone" type="text">
+      </div>
+
+      <button type="submit" class="modal__submit btn">Отправить код</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="auth-confirm-modal">
+  <div class="modal__overlay js_modal_close"></div>
+  <div class="modal__body">
+    <button type="button" class="modal__close js_modal_close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6.13499 18.3625C6.1781 18.4057 6.2293 18.4399 6.28566 18.4633C6.34201 18.4867 6.40242 18.4987 6.46342 18.4987C6.52443 18.4987 6.58484 18.4867 6.64119 18.4633C6.69755 18.4399 6.74874 18.4057 6.79186 18.3625L12.4971 12.6573L18.2046 18.3625C18.2917 18.4496 18.4099 18.4986 18.5331 18.4986C18.6562 18.4986 18.7744 18.4496 18.8615 18.3625C18.9486 18.2754 18.9975 18.1573 18.9975 18.0341C18.9975 17.9109 18.9486 17.7928 18.8615 17.7057L13.1539 12.0005L18.8592 6.29291C18.9463 6.2058 18.9952 6.08766 18.9952 5.96447C18.9952 5.84129 18.9463 5.72315 18.8592 5.63604C18.7721 5.54894 18.6539 5.5 18.5307 5.5C18.4075 5.5 18.2894 5.54894 18.2023 5.63604L12.4971 11.3436L6.78954 5.63836C6.70073 5.56231 6.5865 5.52257 6.46967 5.52708C6.35283 5.5316 6.24201 5.58003 6.15933 5.6627C6.07666 5.74538 6.02823 5.85621 6.02371 5.97304C6.0192 6.08987 6.05894 6.2041 6.13499 6.29291L11.8402 12.0005L6.13499 17.708C6.04853 17.795 6 17.9126 6 18.0353C6 18.1579 6.04853 18.2756 6.13499 18.3625Z"
+          fill="#6C6C6C" />
+      </svg>
+    </button>
+    <p class="modal__text">Мы отправили код на номер</p>
+    <p class="modal__caption">+7 927 304-30-30</p>
+    <a href="#auth-modal" class="modal__link js_modal_open">изменить номер</a>
+    <form id="auth-confirm-form" class="modal__form contact_form" action="">
+      <div class="modal__form-group">
+        <input class="modal__input" type="number" maxlength="1" placeholder="*" tabindex="1">
+        <input class="modal__input" type="number" maxlength="1" placeholder="*" tabindex="2">
+        <input class="modal__input" type="number" maxlength="1" placeholder="*" tabindex="3">
+        <input class="modal__input" type="number" maxlength="1" placeholder="*" tabindex="4">
+        <input class="modal__input" type="number" maxlength="1" placeholder="*" tabindex="5">
+        <input class="modal__input" type="number" maxlength="1" placeholder="*" tabindex="6">
+      </div>
+
+      <input type="hidden" name="auth-confirm-code">
+
+      <button type="submit" class="modal__submit btn">Отправить код</button>
+    </form>
+
+    <button type="button" class="modal__link" href="" disabled>отправить код ещё раз</button>
+    <p class="modal__time">через <span>60</span> cек</p>
+  </div>
+</div>
+
+<div class="modal" id="auth-ban-modal">
+  <div class="modal__overlay js_modal_close"></div>
+  <div class="modal__body">
+    <button type="button" class="modal__close js_modal_close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6.13499 18.3625C6.1781 18.4057 6.2293 18.4399 6.28566 18.4633C6.34201 18.4867 6.40242 18.4987 6.46342 18.4987C6.52443 18.4987 6.58484 18.4867 6.64119 18.4633C6.69755 18.4399 6.74874 18.4057 6.79186 18.3625L12.4971 12.6573L18.2046 18.3625C18.2917 18.4496 18.4099 18.4986 18.5331 18.4986C18.6562 18.4986 18.7744 18.4496 18.8615 18.3625C18.9486 18.2754 18.9975 18.1573 18.9975 18.0341C18.9975 17.9109 18.9486 17.7928 18.8615 17.7057L13.1539 12.0005L18.8592 6.29291C18.9463 6.2058 18.9952 6.08766 18.9952 5.96447C18.9952 5.84129 18.9463 5.72315 18.8592 5.63604C18.7721 5.54894 18.6539 5.5 18.5307 5.5C18.4075 5.5 18.2894 5.54894 18.2023 5.63604L12.4971 11.3436L6.78954 5.63836C6.70073 5.56231 6.5865 5.52257 6.46967 5.52708C6.35283 5.5316 6.24201 5.58003 6.15933 5.6627C6.07666 5.74538 6.02823 5.85621 6.02371 5.97304C6.0192 6.08987 6.05894 6.2041 6.13499 6.29291L11.8402 12.0005L6.13499 17.708C6.04853 17.795 6 17.9126 6 18.0353C6 18.1579 6.04853 18.2756 6.13499 18.3625Z"
+          fill="#6C6C6C" />
+      </svg>
+    </button>
+    <img src="./img/ban.svg" width="145" height="140" alt="">
+    <p class="modal__caption">Временная блокировка</p>
+    <p class="modal__text">
+      Наша система распознала ваши действия как подозрительные и ограничила попытки авторизации на время, попробуйте
+      снова через
+    </p>
+    <p class="modal__caption modal__ban-time">9 мин 59 сек</p>
+  </div>
+</div>
+
+<div class="modal" id="signup-modal">
+  <div class="modal__overlay js_modal_close"></div>
+  <div class="modal__body">
+    <button type="button" class="modal__close js_modal_close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6.13499 18.3625C6.1781 18.4057 6.2293 18.4399 6.28566 18.4633C6.34201 18.4867 6.40242 18.4987 6.46342 18.4987C6.52443 18.4987 6.58484 18.4867 6.64119 18.4633C6.69755 18.4399 6.74874 18.4057 6.79186 18.3625L12.4971 12.6573L18.2046 18.3625C18.2917 18.4496 18.4099 18.4986 18.5331 18.4986C18.6562 18.4986 18.7744 18.4496 18.8615 18.3625C18.9486 18.2754 18.9975 18.1573 18.9975 18.0341C18.9975 17.9109 18.9486 17.7928 18.8615 17.7057L13.1539 12.0005L18.8592 6.29291C18.9463 6.2058 18.9952 6.08766 18.9952 5.96447C18.9952 5.84129 18.9463 5.72315 18.8592 5.63604C18.7721 5.54894 18.6539 5.5 18.5307 5.5C18.4075 5.5 18.2894 5.54894 18.2023 5.63604L12.4971 11.3436L6.78954 5.63836C6.70073 5.56231 6.5865 5.52257 6.46967 5.52708C6.35283 5.5316 6.24201 5.58003 6.15933 5.6627C6.07666 5.74538 6.02823 5.85621 6.02371 5.97304C6.0192 6.08987 6.05894 6.2041 6.13499 6.29291L11.8402 12.0005L6.13499 17.708C6.04853 17.795 6 17.9126 6 18.0353C6 18.1579 6.04853 18.2756 6.13499 18.3625Z"
+          fill="#6C6C6C" />
+      </svg>
+    </button>
+    <p class="modal__caption">Заказать звонок</p>
+    <p class="modal__text">
+      На ваш номер телефона не зарегистрирован аккаунт, нам нужно немного информации, для защиты
+      от взлома и корректной
+      доставки покупок
+    </p>
+    <form id="signup-form" class="modal__form contact_form" action="">
+      <div class="modal__form-group form-group">
+        <label class="modal__label" for="signup-name">ФИО<span>*</span></label>
+        <input class="modal__input" id="signup-name" name="name" type="text">
+      </div>
+      <div class="modal__form-group form-group">
+        <label class="modal__label" for="signup-email">Email</label>
+        <input class="modal__input" id="signup-email" name="email" type="email">
+      </div>
+
+      <button type="submit" class="modal__submit btn">Завершить регистрацию</button>
+    </form>
+    <p class="modal__note">
+      Нажимая на кнопку «Отправить заявку» я даю своё согласие
+      <a href="">на обработку персональных данных</a>
+    </p>
+  </div>
+</div>

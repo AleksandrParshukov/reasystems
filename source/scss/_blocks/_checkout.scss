@@ -1,0 +1,253 @@
+.checkout {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+
+    &--payment {
+      width: 469px;
+      gap: 0 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'caption caption' 
+      'number number' 
+      'number_err number_err' 
+      'exp cvc' 
+      'exp_err cvc_err' 
+      'submit submit' 
+      'checkout_exp checkout_exp';
+
+      .grid-caption {
+        grid-area: caption;
+      }
+
+      .grid-number {
+        grid-area: number;
+
+        & + label.error {
+          grid-area: number_err;
+        }
+      }
+
+      .grid-exp {
+        grid-area: exp;
+
+        & + label.error {
+          grid-area: exp_err;
+        }
+      }
+
+      .grid-cvc {
+        grid-area: cvc;
+
+        & + label.error {
+          grid-area: cvc_err;
+        }
+      }
+
+      .grid-submit {
+        grid-area: submit;
+      }
+
+      .grid-checkout_exp {
+        grid-area: checkout_exp;
+      }
+
+      .checkout__form-group {
+        width: auto;
+      }
+
+      .checkout__caption {
+        width: 100%;
+      }
+    }
+  }
+
+  &__caption {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 16px;
+
+    + .checkout__form-group {
+      margin-top: 0;
+    }
+  }
+
+  &__form-group {
+    width: 469px;
+    height: 51px;
+    padding: 7px 16px;
+    margin-top: 12px;
+    border-radius: 10px;
+    border: 1px solid $gray-light;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+
+    &.focus {
+      border-color: $primary;
+    }
+
+    &--textarea {
+      height: auto;
+      min-height: 51px;
+    }
+
+    &.error {
+      border-color: $assets-4;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    color: $teruary-light;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    > span {
+      color: $assets-4;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    font-size: 16px;
+    color: $black;
+    width: 100%;
+    border: none;
+    padding: 0;
+    height: 0;
+    min-height: 0;
+  }
+
+  &__input {
+    transition: all 0.3s ease;
+  }
+
+  &__textarea {
+    transition: min-height 0.3s ease;
+  }
+
+  &__form-group.open {
+    .checkout {
+      &__label {
+        font-size: 12px;
+
+        > svg {
+          display: none;
+        }
+      }
+
+      &__input {
+        height: 19px;
+        margin-top: 4px;
+      }
+
+      &__textarea {
+        min-height: 19px;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  label.error {
+    font-size: 14px;
+    color: $assets-4;
+    margin-top: 8px;
+    margin-left: 16px;
+  }
+
+  &__search-result {
+    max-height: 360px;
+    overflow: auto;
+  }
+
+  &__delivery-block {
+    margin-top: 12px;
+  }
+
+  &__del-date {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  &__del-address {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  &__del-text {
+    font-size: 14px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  &__submit {
+    margin-top: 16px;
+  }
+
+  &__expiration {
+    font-size: 14px;
+    margin-top: 16px;
+    margin-inline: auto;
+  }
+}
+
+
+
+@media (min-width: $lg) {
+  .checkout__label {
+    > svg {
+      display: none;
+    }
+  }
+}
+
+
+@media (max-width: $md) {
+  .checkout {
+    &__block {
+      &--payment {
+        width: 100%;
+      }
+    }
+
+    &__caption {
+      font-size: 18px;
+    }
+
+    &__form-group {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .checkout {
+    &__form-group {
+      &--half {
+        width: 162px;
+      }
+    }
+
+    .tabs__menu li {
+      width: 100%;
+    }
+  }
+}

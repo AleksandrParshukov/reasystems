@@ -1,0 +1,264 @@
+.testimonials {
+  &__total {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 16px;
+
+    > p {
+      font-size: 18px;
+      color: $teruary-light;
+    }
+  }
+
+  &__rating {
+    font-size: 18px;
+    display: flex;
+    gap: 6px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__item {
+    padding: 16px 24px;
+    background-color: $bg-surface;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__date {
+    font-size: 14px;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  &__more {
+    min-width: 160px;
+    padding: 15px 24px;
+    margin-top: 24px;
+    border: 1px solid $gray-light;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__add-block {
+    margin-block: 24px;
+  }
+
+  &__form {
+    font-size: 16px;
+    padding: 48px 32px;
+    background-color: $bg-surface;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+
+    &.open {
+      display: flex;
+    }
+  }
+
+  &__form-caption {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  &__form-rating {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 2px;
+
+    > input {
+      display: none;
+    }
+
+    > label {
+      color: $gray-light;
+      cursor: pointer;
+
+      &:hover {
+        color: $secondary-hover;
+      }
+    }
+
+    > input:checked ~ label {
+      color: $secondary;
+    }
+
+    &:not(:checked) > label:hover,
+    &:not(:checked) > label:hover ~ label {
+      color: $secondary-hover;
+    }
+
+    > input:checked + label:hover,
+    > input:checked + label:hover ~ label,
+    > input:checked ~ label:hover,
+    > input:checked ~ label:hover ~ label,
+    > label:hover ~ input:checked ~ label {
+      color: $secondary;
+    }
+
+    > label:active {
+      position: relative;
+    }
+  }
+
+  &__form-group {
+    width: 100%;
+    height: auto;
+    min-height: 51px;
+    padding: 7px 16px;
+    margin-top: 12px;
+    border-radius: 10px;
+    border: 1px solid $gray-light;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+
+    &.focus {
+      border-color: $primary;
+    }
+
+    &.error {
+      border-color: $assets-4;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    color: $teruary-light;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  &__textarea {
+    font-size: 16px;
+    color: $black;
+    width: 100%;
+    min-height: 0;
+    height: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    transition: min-height 0.3s ease;
+  }
+
+  &__form-group.open {
+    .testimonials {
+      &__label {
+        font-size: 12px;
+      }
+
+      &__textarea {
+        min-height: 19px;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  label.error {
+    font-size: 14px;
+    color: $assets-4;
+    margin-top: 8px;
+    margin-left: 16px;
+  }
+
+  &__submit {
+    color: $white;
+    margin-top: 16px;
+    background-color: $primary;
+
+    &:hover {
+      color: $white;
+      background-color: $primary-hover;
+    }
+  }
+
+  &__success {
+    font-size: 16px;
+    color: $white;
+    padding: 48px 32px;
+    background-color: $primary;
+    border-radius: 10px;
+    display: none;
+
+    &.open {
+      display: block;
+    }
+    
+    > img {
+      width: 410.556px;
+      max-width: 100%;
+      height: 163px;
+      margin-block: 24px;
+    }
+  }
+
+  &__close {
+    color: $white;
+    background-color: transparent;
+    border: 1px solid currentColor;
+
+    &:hover {
+      color: $primary-footer-link;
+      background-color: transparent;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .testimonials {
+
+    &__item {
+      padding: 16px 12px;
+    }
+
+    &__form {
+      padding: 16px 12px;
+    }
+
+    &__more {
+      width: 100%;
+    }
+    
+
+    &__success {
+      padding: 24px 12px;
+      
+      > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

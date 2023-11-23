@@ -1,0 +1,38 @@
+.breadcrumbs {
+  margin-block: 48px 32px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__item {
+    font-size: 14px;
+
+    & + li::before {
+      content: "/";
+      margin-right: 6px;
+    }
+  }
+}
+
+
+@media (max-width: $lg) {
+  .breadcrumbs {
+    margin-block: 32px;
+  }
+}
+
+@media (max-width: $md) {
+  .breadcrumbs {
+    margin-block: 24px;
+  }
+}
+
+@media (max-width: $sm) {
+  .breadcrumbs {
+    margin-block: 24px 16px;
+  }
+}

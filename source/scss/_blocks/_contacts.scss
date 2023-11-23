@@ -1,0 +1,145 @@
+.contacts {
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 719px;
+    grid-template-rows: min-content min-content min-content;
+    gap: 32px 121px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__caption {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 110%;
+    margin-bottom: 16px;
+  }
+
+  .phone-block {
+    margin-bottom: 16px;
+  }
+
+  &__callback {
+    width: 192px;
+  }
+
+  &__address {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  &__entrance {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+
+  &__metro-list {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__metro-item {
+    font-size: 14px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  &__metro-distance {
+    color: $teruary-light;
+  }
+
+  &__route {
+    width: max-content;
+    background-color: transparent;
+    border: 1px solid $gray-light;
+
+    &:hover {
+      color: $primary;
+      background-color: transparent;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 477px;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+
+    > div {
+      width: 100%;
+      height: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__schedule-name {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  &__schedule-val {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: $lg) {
+  .contacts {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .contacts {
+    &__content {
+      gap: 24px;
+    }
+
+    &__map {
+      height: 279px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .contacts {
+    &__map {
+      height: 164px;
+    }
+
+    &__caption {
+      font-size: 16px;
+    }
+
+    &__address {
+      font-size: 16px;
+    }
+
+    &__schedule-name {
+      font-size: 16px;
+    }
+  }
+}

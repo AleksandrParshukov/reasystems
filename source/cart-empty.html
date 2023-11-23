@@ -1,0 +1,32 @@
+@@include('./_header.html', {'main_class': 'cart'})
+
+
+<section class="cart__section section">
+  <div class="wrapper cart__wrapper">
+    <div class="cart__top">
+      <h1 class="cart__title h2">Корзина</h1>
+    </div>
+
+    <div class="cart__content empty-content">
+      <p class="empty-content__caption">Здесь пока пусто</p>
+
+      <p class="empty-content__text">Выберите товары в каталоге или воспользуйтесь поиском</p>
+
+      <a class="empty-content__btn btn" href="/catalog.html">Перейти в каталог</a>
+    </div>
+  </div>
+</section>
+
+<section class="index-products section">
+  <div class="index-products__wrapper wrapper">
+    <div class="index-products__top section-title">
+      <h2 class="index-products__title h2">
+        Популярные товары
+      </h2>
+      <a class="section-title__link" href="/catalog.html">показать все</a>
+    </div>
+    @@include('./_catalog-list.html', { "class": "cart__catalog-list" })
+  </div>
+</section>
+
+@@include('./_footer.html')

@@ -1,0 +1,11 @@
+@media (max-width: $md) {
+  .index-promotions {
+  .promotions {
+    &__list {
+      li:nth-child(1) {
+        display: none;
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,57 @@
+@@include('./_header.html', {'main_class': 'cart'})
+
+<section class="cart__section section">
+  <div class="cart__breadcrumbs breadcrumbs wrapper">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a href="/account">Личный кабинет</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="/cart.html">Корзина</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="wrapper cart__wrapper">
+
+    <div class="cart__top">
+      <h1 class="cart__title h2">Оформление заказа</h1>
+    </div>
+
+    <div class="cart__content checkout">
+      <form class="checkout__form checkout__form--payment contact_form" action="">
+        <div class="checkout__block checkout__block--payment">
+          <p class="checkout__caption grid-caption">Итого 18 150 ₽</p>
+
+          <div class="checkout__form-group form-group grid-number">
+            <label class="checkout__label" for="card-number">
+              Номер карты
+            </label>
+            <input name="card-number" id="card-number" class="checkout__input js_card_number" type="text">
+          </div>
+
+          <div class="checkout__form-group grid-exp form-group checkout__form-group--half">
+            <label class="checkout__label" for="card-expiry-date">
+              Действует до
+            </label>
+            <input name="card-expiry-date" id="card-expiry-date" class="checkout__input js_card_expiry_date"
+              type="text">
+          </div>
+
+          <div class="checkout__form-group grid-cvc form-group checkout__form-group--half">
+            <label class="checkout__label" for="cvc">
+              CVV/CVC
+            </label>
+            <input name="cvc" id="cvc" class="checkout__input js_card_cvc" type="text">
+          </div>
+
+          <button type="submit" class="checkout__submit btn grid-submit">Оплатить</button>
+          <p class="checkout__expiration grid-checkout_exp">сессия завершится через 19:59</p>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+@@include('./_footer.html')

@@ -1,0 +1,56 @@
+.policy {
+  &__content {
+    h2 {
+      margin-top: 32px;
+    }
+  }
+
+  &__btn {
+    width: max-content;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: $md) {
+  .policy {
+    &__content {
+      h2 {
+        margin-top: 24px;
+      }
+
+      p {
+        margin-top: 12px;
+
+        & + p {
+          margin-top: 6px;
+        }
+      }
+    }
+
+    &__btn {
+      margin-top: 24px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .policy {
+    &__content {
+      h2 {
+        margin-top: 16px;
+      }
+
+      p {
+        margin-top: 4px;
+
+        & + p {
+          margin-top: 2px;
+        }
+      }
+    }
+
+    &__btn {
+      margin-top: 16px;
+    }
+  }
+}

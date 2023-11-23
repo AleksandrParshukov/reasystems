@@ -1,0 +1,32 @@
+.obtaining-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__caption {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__name {
+    font-size: 16px;
+  }
+
+  &__time {
+    font-size: 14px;
+    color: $teruary;
+  }
+}
+

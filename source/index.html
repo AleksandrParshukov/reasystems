@@ -1,0 +1,250 @@
+@@include('./_header.html', {'main_class': ''})
+<section class="banner">
+  <div class="banner__wrapper wrapper">
+    <div class="owl-carousel banner__slider js_banner_slider">
+      <div class="item banner__item" style="background-color: #FCD403;">
+        <p class="banner__title">
+          Вернуть до 100% стоимости продукции
+        </p>
+
+        <p>При оплате товаров электронным сертификатом ТСР</p>
+
+        <a class="banner__link" href="#">Подробнее</a>
+
+        <img class="banner__img" src="./img/imgBannerHome.webp" alt="">
+      </div>
+      <div class="item banner__item" style="background-color: #FCD403;">
+        <p class="banner__title">
+          Вернуть до 100% стоимости продукции
+        </p>
+
+        <p>При оплате товаров электронным сертификатом ТСР</p>
+
+        <a class="banner__link" href="#">Подробнее</a>
+
+        <img class="banner__img" src="./img/imgBannerHome.webp" alt="">
+      </div>
+      <div class="item banner__item" style="background-color: #26D4ED;">
+        <p class="banner__title">
+          Вернуть до 100% стоимости продукции
+        </p>
+
+        <p>При оплате товаров электронным сертификатом ТСР</p>
+
+        <a class="banner__link" href="#">Подробнее</a>
+
+        <img class="banner__img" src="./img/imgBannerHome.webp" alt="">
+      </div>
+      <div class="item banner__item" style="background-color: #2AD550;">
+        <p class="banner__title">
+          Вернуть до 100% стоимости продукции
+        </p>
+
+        <p>При оплате товаров электронным сертификатом ТСР</p>
+
+        <a class="banner__link" href="#">Подробнее</a>
+
+        <img class="banner__img" src="./img/imgBannerHome.webp" alt="">
+      </div>
+      <div class="item banner__item" style="background-color: #FCD403;">
+        <p class="banner__title">
+          Вернуть до 100% стоимости продукции
+        </p>
+
+        <p>При оплате товаров электронным сертификатом ТСР</p>
+
+        <a class="banner__link" href="#">Подробнее</a>
+
+        <img class="banner__img" src="./img/imgBannerHome.webp" alt="">
+      </div>
+      <div class="item banner__item" style="background-color: #FCD403;">
+        <p class="banner__title">
+          Вернуть до 100% стоимости продукции
+        </p>
+
+        <p>При оплате товаров электронным сертификатом ТСР</p>
+
+        <a class="banner__link" href="#">Подробнее</a>
+
+        <img class="banner__img" src="./img/imgBannerHome.webp" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="index-catalog">
+  <div class="index-catalog__wrapper wrapper">
+    <ul class="index-catalog__list">
+      <li class="index-catalog__item index-catalog__item--wide">
+        <a class="index-catalog__img" href=""><img src="./img/index_catalog_1.webp" alt=""></a>
+        <a class="index-catalog__title" href="#">Повязки для лечения ран</a>
+        <ul class="index-catalog__links">
+          <li><a class="index-catalog__link" href="#">Фиксирующие</a></li>
+          <li><a class="index-catalog__link" href="#">Абсорбирующие</a></li>
+          <li><a class="index-catalog__link" href="#">Суперабсорбирующие</a></li>
+          <li><a class="index-catalog__link" href="#">Средства ухода за ранами</a></li>
+        </ul>
+        <a href="/catalog.html" class="index-catalog__fullsize-link"></a>
+      </li>
+      <li class="index-catalog__item index-catalog__item--wide">
+        <a class="index-catalog__img" href=""><img src="./img/index_catalog_2.webp" alt=""></a>
+        <a class="index-catalog__title" href="#">Товары для реабилитации</a>
+        <ul class="index-catalog__links">
+          <li><a class="index-catalog__link" href="#">Колетекс</a></li>
+          <li><a class="index-catalog__link" href="#">Компрессионный трикотаж</a></li>
+          <li><a class="index-catalog__link" href="#">Уход за кожей</a></li>
+        </ul>
+        <a href="/catalog.html" class="index-catalog__fullsize-link"></a>
+      </li>
+      <li class="index-catalog__item">
+        <img class="index-catalog__img" src="./img/index_catalog_3.webp" alt="">
+        <a class="index-catalog__title" href="#">Калоприемники</a>
+        <a href="/catalog.html" class="index-catalog__fullsize-link"></a>
+      </li>
+      <li class="index-catalog__item">
+        <img class="index-catalog__img" src="./img/index_catalog_4.webp" alt="">
+        <a class="index-catalog__title" href="#">Уроприемники</a>
+        <a href="/catalog.html" class="index-catalog__fullsize-link"></a>
+      </li>
+      <li class="index-catalog__item">
+        <img class="index-catalog__img" src="./img/index_catalog_5.webp" alt="">
+        <a class="index-catalog__title" href="#">Уход за стомой</a>
+        <a href="/catalog.html" class="index-catalog__fullsize-link"></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+@@include('./_callback.html')
+
+<section class="index-products section">
+  <div class="index-products__wrapper wrapper">
+    <div class="index-products__top section-title">
+      <h2 class="index-products__title h2">
+        Популярные товары
+      </h2>
+      <a class="section-title__link" href="/catalog.html">показать все</a>
+    </div>
+    @@include('./_catalog-list.html', { "class": "index-products__catalog-list" })
+  </div>
+</section>
+
+<section class="index-promotions section">
+  <div class="wrapper index-promotions__wrapper">
+    <div class="index-promotions__top section-title">
+      <h2 class="index-promotions__title h2">
+        Акции
+      </h2>
+      <a class="section-title__link" href="/promotions.html">показать все</a>
+    </div>
+    <ul class="promotions__list">
+      <li>
+        <a class="promotions__item" href="promotion.html">
+          <img class="promotions__img" src="./img/bannerPromotion1.webp" alt="">
+          <p class="promotions__title">Бесплатная доставка на все товары Comfermer</p>
+          <p class="promotions__deadline">до 12 августа</p>
+        </a>
+      </li>
+      <li>
+        <a class="promotions__item" href="promotion.html">
+          <img class="promotions__img" src="./img/bannerPromotion2.webp" alt="">
+          <p class="promotions__title">Доставка по всей России за 1 ₽</p>
+          <p class="promotions__deadline">до 12 августа</p>
+        </a>
+      </li>
+      <li>
+        <a class="promotions__item" href="promotion.html">
+          <img class="promotions__img" src="./img/bannerPromotion3.webp" alt="">
+          <p class="promotions__title">Возврат стоимости товаров по сертификату ФСС</p>
+          <p class="promotions__deadline">до 12 августа</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="index-products section">
+  <div class="index-products__wrapper wrapper">
+    <div class="index-products__top section-title">
+      <h2 class="index-products__title h2">
+        Новинки
+      </h2>
+      <a class="section-title__link" href="/catalog.html">показать все</a>
+    </div>
+    @@include('./_catalog-list.html', { "class": "index-products__catalog-list" })
+  </div>
+</section>
+
+<section class="brands section">
+  <div class="wrapper">
+    <div class="brands__top section-title">
+      <h2 class="brands__title h2">
+        Бренды и производители
+      </h2>
+    </div>
+    <ul class="brands__list">
+      <li class="brands__item">
+        <img src="./img/brands_1.webp" width="299" height="120" alt="RelaxSan">
+      </li>
+      <li class="brands__item">
+        <img src="./img/brands_2.webp" width="299" height="120" alt="Coloplasst">
+      </li>
+      <li class="brands__item">
+        <img src="./img/brands_3.webp" width="299" height="120" alt="ГемаТех">
+      </li>
+      <li class="brands__item">
+        <img src="./img/brands_4.webp" width="299" height="120" alt="Coletex">
+      </li>
+      <li class="brands__item">
+        <img src="./img/brands_5.webp" width="299" height="120" alt="SwissForce">
+      </li>
+      <li class="brands__item">
+        <img src="./img/brands_6.webp" width="299" height="120" alt="Luxsan">
+      </li>
+      <li class="brands__item">
+        <img src="./img/brands_7.webp" width="299" height="120" alt="ConvaTec">
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="index-articles section">
+  <div class="wrapper">
+    <div class="index-articles__top section-title">
+      <h2 class="index-articles__title h2">
+        Статьи
+      </h2>
+
+      <a class="section-title__link" href="/articles.html">показать все</a>
+    </div>
+
+    <ul class="articles__list">
+      <li>
+        <a href="" class="articles__item">
+          <div class="articles__img"><img src="./img/articles.webp" alt=""></div>
+          <p class="articles__caption">Уход за стомой. Часть 1. Подготовка. Как правильно снять
+            калоприемник.</p>
+          <p class="articles__short-desc">
+            В этой статье вы сможете прочитать как правильно использовать однокомпонентный калоприемник.
+            Материал подготовлен врачом колопроктологом, принцип использования подходит для всех типов однокомпонентных
+            изделий.
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="" class="articles__item">
+          <div class="articles__img"><img src="./img/articles.webp" alt=""></div>
+          <p class="articles__caption">Обработка стомы, замена калоприемника и уход
+            за приспособлением</p>
+          <p class="articles__short-desc">
+            В этой статье вы сможете прочитать как правильно использовать однокомпонентный калоприемник.
+            Материал подготовлен врачом колопроктологом, принцип использования подходит для всех типов однокомпонентных
+            изделий.
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+@@include('./_footer.html')

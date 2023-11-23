@@ -1,0 +1,275 @@
+.cart {
+  &__breadcrumbs {
+    margin-bottom: 0;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 299px;
+    gap: 0 16px;
+  }
+
+  &__top {
+    margin-block: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    grid-column: span 2;
+  }
+
+  &__reset {
+    font-size: 14px;
+    color: $primary;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__item {
+    padding: 12px 16px 12px 0px;
+    border-bottom: 0.5px solid $gray-light;
+    display: grid;
+    grid-template-columns: 107px 323px 1fr max-content;
+    grid-template-areas: 'img name price control' 'img name qty control';
+    gap: 0 24px;
+  }
+
+  &__img {
+    width: 107px;
+    height: auto;
+    margin-right: auto;
+    grid-area: img;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 500;
+    margin-block: auto;
+    grid-area: name;
+  }
+
+  &__price {
+    font-size: 24px;
+    font-weight: 600;
+    color: $primary;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    grid-area: price;
+  }
+
+  &__price-old {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: $teruary-light;
+  }
+
+  &__qty {
+    width: 164px;
+    grid-area: qty;
+  }
+
+  &__controls {
+    margin: auto;
+    margin-right: 0;
+    display: flex;
+    gap: 16px;
+    grid-area: control;
+  }
+
+  &__favorite {
+    color: $gray-light;
+
+    &:hover {
+      color: $assets-4;
+    }
+
+    &.active,
+    &:active {
+      color: $assets-4;
+
+      path {
+        fill: $assets-4;
+      }
+    }
+  }
+
+  &__delete {
+    color: $gray-light;
+
+    &:hover {
+      color: $assets-4;
+    }
+  }
+
+  &__aside {
+    position: relative;
+  }
+
+  &__total {
+    color: $white;
+    padding: 32px 24px;
+    background: $primary;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  &__total-list {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__total-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > dt {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    > dd {
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  &__total-cost {
+    > dt {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    > dd {
+      font-size: 26px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (min-width: $lg) {
+  .cart {
+    .catalog-list__item:nth-child(4) ~ .catalog-list__item {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .cart {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 1fr 315px;
+      gap: 0 16px;
+    }
+
+    &__item {
+      display: grid;
+      grid-template-columns: 107px 185px 1fr max-content;
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+
+    &__price {
+      font-size: 20px;
+    }
+
+    &__price-old {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .cart {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__top {
+      margin-block: 24px 0;
+    }
+
+    &__item {
+      grid-template-columns: max-content 1fr max-content;
+      grid-template-areas: 'img name name' 'qty price control';
+      gap: 16px 0;
+    }
+
+    &__img {
+      width: 145px;
+      margin-right: 24px;
+    }
+
+    &__price {
+      margin-block: auto;
+    }
+
+    &__qty {
+      margin-right: 12px;
+    }
+
+    &__controls {
+      gap: 24px;
+    }
+
+    .catalog-list__item:nth-child(6) ~ .catalog-list__item {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .cart {
+
+    &__item {
+      grid-template-columns: max-content min-content 1fr;
+      grid-template-areas: 'img name name' 'img price price' 'qty qty control';
+      gap: 0;
+    }
+
+    &__img {
+      width: 107px;
+      margin-bottom: 16px;
+      margin-right: 24px;
+    }
+
+    &__name {
+      font-size: 16px;
+      margin-block: 0 12px;
+    }
+
+    &__price {
+      margin-bottom: 16px;
+    }
+
+    &__qty {
+      margin-right: auto;
+    }
+
+    &__total {
+      padding: 16px 10px;
+    }
+  }
+}

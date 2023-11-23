@@ -1,0 +1,273 @@
+.footer {
+  color: $white;
+  background-color: $primary;
+  margin-top: 88px;
+  align-self: end;
+
+  &__wrapper {
+    padding-block: 64px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__logo {
+    width: 194px;
+    height: 59px;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__social-link {
+    font-size: 14px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    
+    > svg {
+      width: 40px;
+      aspect-ratio: 1 / 1;
+      color: $secondary;
+    }
+
+    &:hover {
+      color: $white;
+
+      > svg {
+        color: $secondary-hover;
+      }
+    }
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(3, 203px) max-content;
+    gap: 32px;
+  }
+
+  &__caption {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+
+    &:hover {
+      color: $white;
+    }
+
+    > svg {
+      display: none;
+    }
+  }
+
+  &__menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__link {
+    color: $primary-footer-link;
+    font-size: 14px;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__phone {
+    color: $primary-footer-link;
+    font-size: 20px;
+    font-weight: 500;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__desc {
+    font-size: 12px;
+    font-weight: 300;
+    margin-block: 8px;
+  }
+
+  &__btn {
+    width: 192px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    grid-column: span 2;
+  }
+
+  &__policy {
+    color: $primary-footer-link;
+    font-size: 14px;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__copyright {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: $lg) {
+  .footer {
+    margin-top: 72px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__top {
+      flex-direction: row;
+      align-items: center;
+      gap: 56px;
+      margin-bottom: 12px;
+    }
+
+    &__social {
+      flex-direction: row;
+    }
+
+    &__menu {
+      display: grid;
+      grid-template-columns: repeat(3, 237px) max-content;
+      gap: 24px;
+    }
+  }
+}
+
+
+
+@media (min-width: $md) {
+  .footer__menu-list {
+    display: flex !important;
+    height: auto !important;
+    visibility: visible !important;
+  }
+}
+
+@media (max-width: $md) {
+  .footer {
+    padding-bottom: 60px;
+    margin-top: 64px;
+
+    &__wrapper {
+      padding-block: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    &__top {
+      flex-direction: column;
+      align-items: start;
+      gap: 32px;
+    }
+
+    &__social {
+      flex-direction: column;
+    }
+
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      grid-row: span 2;
+    }
+
+    &__caption {
+      margin-bottom: 0;
+
+      > svg {
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      &.collapsed {
+        > svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__menu-list {
+      display: flex;
+      flex-direction: column;
+      margin-top: 8px;
+      gap: 8px;
+    }
+
+    &__contacts {
+      .footer__menu-list {
+        margin-top: 16px;
+        gap: 16px;
+      }
+    }
+
+    &__desc {
+      margin-block: 4px 0;
+    }
+
+    &__menu-list {
+      gap: 0;
+    }
+
+    &__link {
+      width: 100%;
+      padding-block: 4px;
+      display: block;
+    }
+
+    &__bottom {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 16px;
+      grid-column: span 1;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .footer {
+    margin-top: 48px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__top {
+      gap: 12px;
+    }
+
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}

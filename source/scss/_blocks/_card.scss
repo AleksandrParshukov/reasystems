@@ -1,0 +1,298 @@
+.card {
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0px 0px 10px 0px rgba(1, 34, 53, 0.10);
+    z-index: 1;
+  }
+
+  &__content {
+    height: 100%;
+    padding: 24px 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    > *:not(.card__fullsize-link) {
+      z-index: 1;
+    }
+  }
+
+  &__top {
+    margin: 8px 8px 0;
+    display: flex;
+    gap: 24px;
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    right: 16px;
+    z-index: 2 !important;
+  }
+
+  &__badges {
+    width: 100%;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__badge {
+    font-size: 14px;
+    color: $white;
+    width: max-content;
+    padding: 3px 12px 4px 12px;
+    border-radius: 13px;
+
+    &--sale {
+      background-color: $assets-2;
+    }
+
+    &--sertificate {
+      background-color: #26D4ED;
+    }
+  }
+
+  &__favorite {
+    color: $gray-light;
+    width: 32px;
+    height: 32px;
+
+    &:hover {
+      color: $assets-4;
+    }
+
+    &.active,
+    &:active {
+      color: $assets-4;
+
+      path {
+        fill: $assets-4;
+      }
+    }
+  }
+
+  &__img {
+    width: 277px;
+    height: 246px;
+    margin-bottom: 16px;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__rating {
+    font-size: 18px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+
+    > svg {
+      width: 20px;
+      aspect-ratio: 1 / 1;
+    }
+  }
+  
+  &__size {
+    font-size: 12px;
+    text-align: right;
+    color: $teruary;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    max-height: 66px;
+    margin-block: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__price {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: $primary;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  &__old-price {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-decoration: line-through;
+    color: $teruary-light;
+  }
+
+  &__add2cart {
+    margin-top: 16px;
+    position: relative;
+    
+    &.added {
+      .card__qty {
+        z-index: 1;
+      }
+    }
+  }
+
+  &__qty {
+    z-index: -1;
+  }
+
+  &__fullsize-link {
+    background-color: $white;
+    border-radius: 10px;
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: $lg) {
+  .card {
+    padding: 12px 8px;
+
+    &__top {
+      gap: 0;
+      align-items: center;
+    }
+
+    &__badges {
+      margin-top: 0;
+      display: flex;
+    }
+
+    &__badge {
+      font-size: 12px;
+      padding: 3px 8px 4px;
+    }
+
+    &__img {
+      width: 228px;
+      height: 202px;
+    }
+
+    &__rating {
+      font-size: 16px;
+
+      > svg {
+        width: 16px;
+      }
+    }
+
+    &__name {
+      font-size: 16px;
+      max-height: 59px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .card {
+    padding: 12px 8px;
+
+    &__top {
+      gap: 0;
+    }
+
+    &__badges {
+      margin-top: 5px;
+      flex-direction: column;
+    }
+
+    &__img {
+      width: 173px;
+      height: 154px;
+    }
+    
+    &__size {
+      font-size: 12px;
+      text-align: right;
+      color: $teruary;
+    }
+
+    &__price {
+      font-size: 20px;
+    }
+
+    &__old-price {
+      font-size: 16px;
+    }
+
+    &__add2cart {
+      margin-top: 12px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .card {
+    padding: 8px 0;
+    border-radius: 5px;
+
+    &__badges {
+      margin-top: 0;
+    }
+
+    &__badge {
+      font-size: 10px;
+      padding: 2px 6px 3px;
+    }
+
+    &__img {
+      width: 162px;
+      height: 144px;
+    }
+
+    &__rating {
+      font-size: 12px;
+      gap: 4px;
+
+      > svg {
+        width: 12px;
+      }
+    }
+    
+    &__size {
+      display: none;
+    }
+
+    &__name {
+      font-size: 14px;
+      max-height: 33px;
+      margin-block: 8px;
+      -webkit-line-clamp: 2;
+    }
+
+    &__price {
+      font-size: 16px;
+      gap: 6px;
+    }
+
+    &__old-price {
+      font-size: 12px;
+    }
+
+    &__add2cart {
+      margin-top: 8px;
+    }
+  }
+}

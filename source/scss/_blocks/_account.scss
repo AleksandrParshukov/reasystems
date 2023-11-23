@@ -1,0 +1,181 @@
+.account {
+  &__wrapper {
+    margin-top: 48px;
+    display: flex;
+    gap: 16px;
+  }
+
+  &__menu {
+    min-width: 299px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__menu-link {
+    font-size: 16px;
+    color: $black;
+    width: max-content;
+    padding: 12px 24px 12px 12px;
+    border-radius: 10px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &.current {
+      color: $primary;
+      background-color: $primary-footer-link;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.1; 
+  }
+
+  &__form {
+    width: min-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 8px;
+  }
+
+  &__input {
+    font-size: 14px;
+    width: 509px;
+    padding: 17px 16px;
+    border: 1px solid $gray-light;
+    border-radius: 10px;
+
+    &.error {
+      border-color: $assets-4;
+    }
+  }
+
+  label.error {
+    font-size: 14px;
+    color: $assets-4;
+    margin-top: -4px;
+    margin-left: 16px;
+  }
+
+  &__submit,
+  &__reset {
+    width: 250px;
+    flex-grow: 1;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+
+
+  &__reset {
+    background-color: transparent;
+
+    &:hover {
+      color: $primary;
+      background-color: transparent;
+    }
+  }
+
+  &__logout {
+    font-size: 16px;
+    color: $assets-4;
+
+    &:hover {
+      color: $assets-4-hover;
+    }
+  }
+
+  &__orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: $lg) {
+  .account {
+    &__wrapper {
+      margin-top: 32px;
+    }
+
+    &__menu {
+      min-width: 205px;
+    }
+
+    &__input {
+      width: 423px;
+    }
+
+    &__submit,
+    &__reset {
+      width: 207px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .account {
+    &__wrapper {
+      margin-top: 24px;
+      gap: 24px;
+      flex-direction: column;
+    }
+
+    &__menu {
+      flex-direction: row;
+      gap: 4px;
+    }
+
+    &__content {
+      gap: 24px;
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+
+    &__form {
+      width: 100%;
+    }
+
+    &__input {
+      width: 100%;
+    }
+
+    &__submit,
+    &__reset {
+      width: 40%;
+      flex-grow: 1;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .account {
+    &__menu {
+      width: 100%;
+      overflow: auto;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+  }
+}

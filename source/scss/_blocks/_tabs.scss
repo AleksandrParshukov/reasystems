@@ -1,0 +1,40 @@
+.tabs {
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    > li.active {
+      .tabs__link {
+        border-color: $primary;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: $black;
+    padding: 16px;
+    background: $white;
+    border-radius: 5px;
+    border: 1px solid $gray-light;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+
+    &:hover {
+      color: $black;
+      border-color: $primary;
+    }
+
+    &.active {
+      border-color: $primary;
+    }
+  }
+
+  &__item {
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,21 @@
+.search {
+  &__content {
+    margin-top: 55px;
+  }
+}
+
+@media (max-width: $lg) {
+  .search {
+    &__content {
+      margin-top: 32px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .search {
+    &__content {
+      margin-top: 24px;
+    }
+  }
+}

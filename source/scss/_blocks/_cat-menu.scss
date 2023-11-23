@@ -1,0 +1,103 @@
+.cat-menu {
+  &__title {
+    margin-block: 24px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    &--form {
+      gap: 24px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  &__caption {
+    font-size: 18px;
+    font-weight: 500;
+    padding-block: 12px;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+
+    &:not(.collapsed) {
+      .cat-menu__svg {
+        transform: rotate(-180deg);
+      }
+    }
+
+    &--inline {
+      display: inline;
+      padding: 0;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__svg {
+    width: 16px;
+    aspect-ratio: 1 / 1;
+    margin-block: 4px auto;
+    display: grid;
+    place-content: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  &__submenu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__submenu-link {
+    font-size: 16px;
+    padding-block: 6px;
+    display: block;
+  }
+
+  &__checkbox {
+    display: none;
+
+    & + label {
+      font-size: 16px;
+      padding-block: 6px;
+      display: flex;
+      gap: 8px;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary;
+      }
+      
+      &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-color: $bg-surface;
+        border-radius: 4px;
+        flex-shrink: 0;
+        transition: background-color 0.3s ease;
+      }
+    }
+  }
+
+  &__checkbox:checked + label::before {
+    background: $primary-footer-link url('../img/check.svg') no-repeat center;
+    background-size: 12px;
+  }
+
+  &__reset {
+    color: $primary;
+    margin-top: 24px;
+  }
+}

@@ -1,0 +1,18 @@
+#auth-ban-modal {
+  img {
+    text-align: center;
+    margin-inline: auto;
+    margin-bottom: 32px;
+  }
+
+  .modal {
+    &__caption {
+      color: $assets-4;
+    }
+
+    &__ban-time {
+      color: $black;
+      margin-top: 16px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.empty-content {
+  &__caption {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.1; 
+  }
+
+  &__text {
+    font-size: 16px;
+    margin-block: 8px 24px;
+  }
+
+  &__btn {
+    width: 299px;
+  }
+}
+
+@media (max-width: $sm) {
+  .search {
+    &__caption {
+      font-size: 14px;
+    }
+  }
+}

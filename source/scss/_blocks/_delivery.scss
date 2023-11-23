@@ -1,0 +1,160 @@
+.delivery {
+  &__caption {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  &__tab {
+    margin-top: 12px;
+
+    &--grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+  }
+
+  &__block {
+    padding: 24px 16px;
+    background-color: $bg-surface;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &:first-child {
+      grid-column: span 2;
+    }
+  }
+
+  &__block-name {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__dl {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__dl-item {
+    font-size: 14px;
+    display: flex;
+    gap: 4px 16px;
+    justify-content: space-between;
+
+    > dt {
+      font-weight: 400;
+    }
+
+    > dd {
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  &__spb-area {
+    display: grid;
+    grid-template-columns: 403px 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    gap: 8px 16px;
+
+    > img {
+      width: 100%;
+      height: auto;
+      grid-row: span 3;
+    }
+  }
+
+  &__block-text {
+    font-size: 14px;
+
+    > a {
+      font-size: inherit;
+      color: $primary;
+
+      &:hover {
+        color: $primary-hover;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+
+    & + .delivery__text {
+      margin-top: 24px;
+    }
+  }
+
+  &__callback {
+    width: max-content;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: $md) {
+  .delivery {
+    &__caption {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .tabs__menu {
+      width: 100%;
+      overflow: auto;
+      scrollbar-width: none;
+      flex-wrap: nowrap;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+
+    .tabs__link {
+      width: max-content;
+    }
+
+    &__tab {
+      &--grid {
+        grid-template-columns: 100%;
+      }
+    }
+
+    &__block {
+      &:first-child {
+        grid-column: span 1;
+      }
+    }
+
+    &__spb-area {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      > img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .delivery {
+    &__caption {
+      font-size: 16px;
+    }
+
+    &__dl-item {
+      flex-wrap: wrap;
+      gap: 4px 16px;
+      align-items: center;
+    }
+
+  }
+}

@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:active,
+*:focus {
+  outline: none;
+}
+
+html {
+  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  color: $black;
+  height: 100%;
+  background-color: $white;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content min-content 1fr;
+
+  &.modal_open {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+a, input {
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: $primary-hover;
+}
+
+input:focus {
+  outline: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+@media (max-width: $md) {
+  body, a, input {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: $sm) {
+  body, a, input {
+    font-size: 12px;
+  }
+}

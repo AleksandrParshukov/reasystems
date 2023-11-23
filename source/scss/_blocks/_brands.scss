@@ -1,0 +1,53 @@
+.brands {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  &__item {
+    width: 299px;
+    height: 120px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .brands {
+    &__item {
+      width: 232px;
+      height: 93px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .brands {
+    &__list {
+      gap: 8px;
+      justify-content: start;
+    }
+
+    &__item {
+      width: 274px;
+      height: 110px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .brands {
+    &__item {
+      width: 163px;
+      height: 65px;
+    }
+  }
+}

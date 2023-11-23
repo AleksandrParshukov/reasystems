@@ -1,0 +1,39 @@
+.main-nav {
+
+  &__list {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__item a {
+    padding: 8px;
+  }
+}
+
+@media (max-width: $lg) {
+  .main-nav {
+
+    &__list {
+      display: flex;
+      gap: 4px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .main-nav {
+    width: 100%;
+    order: -1;
+
+    &__list {
+      gap: 0;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .main-nav {
+    display: none;
+  }
+}

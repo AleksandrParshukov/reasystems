@@ -1,0 +1,70 @@
+@@include('./_header.html', {'main_class': 'article'})
+
+<div class="breadcrumbs wrapper">
+  <ul class="breadcrumbs__list">
+    <li class="breadcrumbs__item">
+      <a href="/account">Личный кабинет</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a href="/cart.html">Акции</a>
+    </li>
+  </ul>
+</div>
+
+<article class="article__section">
+  <div class="wrapper article__wrapper">
+
+    <div class="promo-banner" style="background-color: #2AD550;">
+      <div class="promo-banner__content">
+        <h1 class="promo-banner__title">
+          Вернуть до 100% стоимости продукции
+        </h1>
+
+        <p>При оплате товаров электронным сертификатом ТСР</p>
+
+        <a class="promo-banner__link" href="/catalog.html">В каталог</a>
+
+        <p class="promo-banner__deadline">до 12 августа</p>
+      </div>
+
+      <img class="promo-banner__img" src="./img/imgBannerHome.webp" alt="">
+    </div>
+
+    <div class="article__content">
+      <div class="promotions__long-desc spage">
+        <h2>Вернуть до 100% стоимости продукции</h2>
+
+        <p>
+          Господа, высокотехнологичная концепция общественного уклада способствует повышению качества анализа
+          существующих
+          паттернов поведения. Предварительные выводы неутешительны: современная методология разработки в значительной
+          степени
+          обусловливает важность своевременного выполнения сверхзадачи. Таким образом, экономическая повестка
+          сегодняшнего
+          дня влечёт за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных
+          задач.
+        </p>
+        <p>
+          Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности
+          является
+          качественно новой ступенью новых предложений. С учётом сложившейся международной обстановки, понимание сути
+          ресурсосберегающих технологий способствует подготовке и реализации первоочередных требований.
+        </p>
+      </div>
+    </div>
+
+    <section class="article__products section">
+      <div class="article__products-wrapper wrapper">
+        <div class="article__products-top section-title">
+          <h2 class="article__products-title h2">
+            Товары, которые участвуют в акции
+          </h2>
+        </div>
+        @@include('./_catalog-list.html', { "class": "promotions__catalog-list" })
+      </div>
+    </section>
+
+  </div>
+</article>
+
+@@include('./_footer.html')

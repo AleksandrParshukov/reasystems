@@ -1,0 +1,48 @@
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: $sm) {
+  .mobile-menu {
+    padding: 40px 12px 16px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    transform: translateX(-100%);
+    z-index: 90;
+    transition: transform 0.3s ease;
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    &__list {
+      margin-block: 24px;
+    }
+
+    &__link {
+      font-size: 18px;
+      font-weight: 500;
+      padding-block: 12px;
+      display: block;
+    }
+
+    .header__catalog-toggle {
+      color: $black;
+      width: 100%;
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+    }
+
+    &__btn {
+      margin-top: auto;
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

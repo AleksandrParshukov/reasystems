@@ -1,0 +1,36 @@
+.payment {
+  &__caption {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: $lg) {
+  .payment {
+    &__tabs {
+      width: 823px;
+    }
+  }
+}
+
+
+@media (max-width: $md) {
+  .payment {
+    .tabs__menu {
+      width: 100%;
+      overflow: auto;
+      scrollbar-width: none;
+      flex-wrap: nowrap;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+
+    .tabs__link {
+      width: max-content;
+    }
+  }
+}

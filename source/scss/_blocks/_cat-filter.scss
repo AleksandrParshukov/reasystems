@@ -1,0 +1,38 @@
+.cat-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  &__link {
+    font-size: 18px;
+    font-weight: 500;
+    width: max-content;
+    padding: 12px 16px;
+    background-color: $bg-surface;
+    border-radius: 5px;
+    display: block;
+
+    &:hover {
+      color: $secondary;
+    }
+
+    &.active {
+      background-color: $secondary;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .cat-filter {
+    flex-wrap: nowrap;
+
+    .owl-stage {
+      display: flex;
+      gap: 8px;
+    }
+  }
+}
