@@ -76,9 +76,11 @@
   }
 
   &__img {
-    width: 277px;
+    width: 100%;
+    max-width: 277px;
     height: 246px;
     margin-bottom: 16px;
+    margin-inline: auto;
 
     > img {
       width: 100%;
@@ -186,7 +188,7 @@
     }
 
     &__img {
-      width: 228px;
+      max-width: 228px;
       height: 202px;
     }
 
@@ -219,7 +221,7 @@
     }
 
     &__img {
-      width: 173px;
+      max-width: 173px;
       height: 154px;
     }
     
@@ -258,7 +260,7 @@
     }
 
     &__img {
-      width: 162px;
+      max-width: 162px;
       height: 144px;
     }
 

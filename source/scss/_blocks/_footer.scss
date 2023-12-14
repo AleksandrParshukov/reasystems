@@ -51,7 +51,7 @@
 
   &__menu {
     display: grid;
-    grid-template-columns: repeat(3, 203px) max-content;
+    grid-template-columns: repeat(3, 1fr) max-content;
     gap: 32px;
   }
 
@@ -70,6 +70,13 @@
     > svg {
       display: none;
     }
+  }
+
+  &__catalog,
+  &__buyers,
+  &__additionally {
+    width: 237px;
+    margin-right: auto;
   }
 
   &__menu-list {
@@ -151,8 +158,6 @@
     }
 
     &__menu {
-      display: grid;
-      grid-template-columns: repeat(3, 237px) max-content;
       gap: 24px;
     }
   }

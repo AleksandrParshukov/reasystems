@@ -158,9 +158,10 @@
 
 @media (max-width: $lg) {
   .callback {
-    max-width: $md;
+    max-width: 100%;
     padding: 64px 24px;
     margin-block: 72px;
+    margin-inline: 24px;
     border-radius: 30px;
 
     &__doctor {
@@ -192,9 +193,9 @@
 
 @media (max-width: $md) {
   .callback {
-    max-width: $sm;
     padding: 8px 24px 32px;
     margin-block: 64px;
+    margin-inline: 16px;
     border-radius: 30px;
 
     &__wrapper {
@@ -226,9 +227,9 @@
 
 @media (max-width: $sm) {
   .callback {
-    max-width: $xs;
     padding: 8px 12px 32px;
     margin-block: 48px;
+    margin-inline: 12px;
     border-radius: 30px;
 
     &__wrapper {

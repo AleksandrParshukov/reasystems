@@ -127,7 +127,7 @@
 @media (min-width: $lg) {
   .order {
     &__add2cart {
-      > svg {
+      > .btn svg {
         display: none;
       }
     }
@@ -151,10 +151,12 @@
     }
 
     &__add2cart {
-      padding: 15px;
+      > .btn {
+        padding: 15px;
 
-      > span {
-        display: none;
+        span {
+          display: none;
+        }
       }
     }
   }
@@ -202,6 +204,10 @@
       width: 398px;
       margin-right: 0;
     }
+
+    &__price {
+      flex: 50% 1 1;
+    }
   }
 }
 
@@ -213,8 +219,13 @@
 
     &__name {
       font-size: 18px;
-      width: 200px;
+      flex-basis: 200px;
       margin-right: 0;
+      flex-grow: 1;
+    }
+
+    &__price {
+      flex-basis: 40%;
     }
   }
 } 

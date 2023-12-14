@@ -114,6 +114,8 @@ function init_carousel() {
 				src = $img.attr('src'),
 				$big_img = $('.product__big-img img');
 
+			$product_img_carousel.find('.owl-item.current').removeClass('current');
+			$item.closest('.owl-item').addClass('current');
 			$big_img.attr('src', src);
 		});
 	}
@@ -266,10 +268,11 @@ function init_sticky_elements() {
 			Z = 0,
 			P = 24,
 			N = 24; // если у P ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента, если у N — нижний край дойдёт до нижнего края элемента. Может быть отрицательным числом
-		window.addEventListener('scroll', Ascroll, false);
+		//window.addEventListener('scroll', Ascroll, false);
 		document.body.addEventListener('scroll', Ascroll, false);
 		// $cat_menu_caption.on('click', Ascroll);
 		function Ascroll() {
+			console.log('Ascroll');
 			var Ra = a.getBoundingClientRect(),
 				R1bottom = base.getBoundingClientRect().bottom;
 
@@ -317,6 +320,7 @@ function init_sticky_elements() {
 								// подцепиться
 								b.className = 'sticky';
 								b.style.top = W - Rb.height - N + 'px';
+								// b.style.top = Ra.top + P + 'px';
 								b.style.bottom = '';
 								Z = N + Ra.top + Rb.height - W;
 							} else {
@@ -359,7 +363,7 @@ function init_sticky_elements() {
 							b.style.bottom = '0';
 						} else {
 							b.className = 'sticky';
-							b.style.top = P + 'px';
+							b.style.top = -Ra.top + P + 'px';
 							b.style.bottom = '';
 						}
 					} else {
@@ -485,14 +489,18 @@ function init_qty() {
 function init_price_card() {
 	const $price_card_fixed = $('.js_price_card_fixed');
 
+	console.log($price_card_fixed);
+
 	if (!$price_card_fixed.length) {
 		return false;
 	}
 
-	$(document).on('scroll', function () {
+	$('body').on('scroll', function () {
 		const PADDING_BOTTOM = 16;
 		const $price_card_static = $('.js_price_card_static'),
 			position = $price_card_static[0].getBoundingClientRect();
+
+		console.log('asd');
 
 		if (position.bottom <= PADDING_BOTTOM) {
 			$price_card_fixed.addClass('show');
@@ -774,6 +782,21 @@ function init_favorite() {
 	});
 }
 
+function init_hovers() {
+	if ($('.acc-order__top').length) {
+		const $acc_order_top = $('.acc-order__top');
+
+		$acc_order_top.on({
+			mouseenter: function () {
+				$(this).closest('.acc-order').addClass('hover');
+			},
+			mouseleave: function () {
+				$(this).closest('.acc-order').removeClass('hover');
+			},
+		});
+	}
+}
+
 /* Исключительно на время вёрстки */
 function init_order() {
 	/* Поиск */
@@ -832,7 +855,6 @@ $(document).ready(function () {
 	init_sticky_elements();
 	init_search();
 	init_qty();
-	init_price_card();
 	init_form_groups();
 	init_order_form();
 	init_tabs();
@@ -844,6 +866,11 @@ $(document).ready(function () {
 	init_add_testimonial();
 	init_contact_form();
 	init_favorite();
+	init_hovers();
+
+	if ($(window).width() < 1024) {
+		init_price_card();
+	}
 
 	/* Исключительно на время вёрстки */
 	init_order();
